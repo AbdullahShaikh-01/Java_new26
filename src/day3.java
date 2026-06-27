@@ -20,6 +20,6 @@ public class day3{
 
         }
 
-        System.out.println("Thanku for enter months!!");
+        System.out.println("Thank for enter months!!");
     }
 }
