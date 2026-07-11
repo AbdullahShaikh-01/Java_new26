@@ -227,8 +227,8 @@ public class day11 {
                 System.out.println(i);
                 */
 
-
-            /*static void change_no (int a) {
+        /*
+            static void change_no (int a) {
                 a = 100;
             }
             static void change2(int [] arr){
@@ -244,7 +244,8 @@ public class day11 {
                 for (int i = 0; i <marks.length; i++){
                     System.out.print("\t"+marks[i]);
                 }
-                */
+
+            */
 
 
     static int sum(int ... arr) {
@@ -262,6 +263,7 @@ public class day11 {
             }
 
         }
+
 
 
 
