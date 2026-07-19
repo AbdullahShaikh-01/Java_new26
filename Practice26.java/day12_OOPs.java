@@ -309,44 +309,130 @@
 //
 //    }
 
-import java.util.Scanner;
+//import java.util.Scanner;
+//
+//class GuessGame {
+//    int target;
+//
+//    GuessGame(int target) {
+//        this.target = target;
+//    }
+//
+//    void playGame() {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Guess a number: ");
+//        int num = sc.nextInt();
+//
+//        while (num != target) {
+//            if (Math.abs(target - num)<=5){
+//                System.out.println("Very Close!");
+//            } else if (num<target){
+//                System.out.println("Too Low!");
+//            }else{
+//                System.out.println("Too High!");
+//            }
+//
+//            System.out.println("Oops Guess Again !");
+//            num = sc.nextInt();
+//
+//        }
+//        System.out.println("Congratulations Bro !");
+//        sc.close();
+//
+//
+//    }
+//
+//    public static void main(String[] args) {
+//        GuessGame game = new GuessGame(50);
+//        game.playGame();
+//
+//    }
+//
+//}
 
-class GuessGame {
-    int target;
 
-    GuessGame(int target) {
-        this.target = target;
+//class Cylinder{
+//    private double radius;
+//    private double height;
+//
+//    public void setRadius(double radius){
+//        if(radius>0){
+//        this.radius=radius;
+//
+//        }else {
+//            System.out.println("Invalid Radius!");
+//        }
+//    }
+//    public double getRadius(){
+//        return radius;
+//    }
+//
+//    public void setHeight(double height){
+//        this.height=height;
+//    }
+//    public double getHeight(){
+//        return height;
+//    }
+//
+//    public double getSurfaceArea(){
+//        return 2 * Math.PI *radius*(radius+height);
+//    }
+//    public double getVolume(){
+//        return Math.PI * radius*radius*height;
+//    }
+//    public static void main(String[] args){
+//        Cylinder f1 = new Cylinder();
+//        f1.setRadius(7);
+//        f1.setHeight(6);
+//        System.out.printf("Surface Area: %.2f%n",f1.getSurfaceArea());
+//        System.out.printf("Volume: %.2f%n",f1.getVolume());
+//    }
+//}
+
+class Rectangle{
+    private double length;
+    private double breadth;
+
+    Rectangle(){
+        this.length=4;
+        this.breadth=5;
     }
 
-    void playGame() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Guess a number: ");
-        int num = sc.nextInt();
+    Rectangle(double length, double breadth){
+        this.length=length;
+        this.breadth=breadth;
+    }
 
-        while (num != target) {
-            if (Math.abs(target - num)<=5){
-                System.out.println("Very Close!");
-            } else if (num<target){
-                System.out.println("Too Low!");
-            }else{
-                System.out.println("Too High!");
-            }
 
-            System.out.println("Oops Guess Again !");
-            num = sc.nextInt();
 
-        }
-        System.out.println("Congratulations Bro !");
-        sc.close();
+    double getArea(){
+        return length*breadth;
+
+    }
+    double getPerimeter(){
+        return 2*(length+breadth);
 
 
     }
 
-    public static void main(String[] args) {
-        GuessGame game = new GuessGame(50);
-        game.playGame();
 
+    public static void main(String[] args){
+        Rectangle g1 = new Rectangle();
+        Rectangle g2 = new Rectangle(12, 9);
+
+        System.out.println("Rectangle 1");
+
+        System.out.printf("Area: %.2f%n",g1.getArea());
+        System.out.printf("Perimeter: %.2f%n",g1.getPerimeter());
+
+        System.out.println();
+
+        System.out.println("Rectangle 2");
+
+        System.out.printf("Area: %.2f%n",g2.getArea());
+        System.out.printf("Perimeter: %.2f%n",g2.getPerimeter());
     }
+
 
 }
 
