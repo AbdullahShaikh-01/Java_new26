@@ -134,32 +134,60 @@ import java.util.Scanner;
 //            }
 
 
-                public static void main(String[] args){
-                    Scanner sc = new Scanner(System.in);
-                    System.out.println("Enter marks: ");
+//                public static void main(String[] args){
+//                    Scanner sc = new Scanner(System.in);
+//                    System.out.println("Enter marks: ");
+//
+//                    int[] marks = new int[5];
+//                    int sum = 0;
+//
+//
+//                    for (int i=0; i<marks.length; i++){
+//                       marks[i]= sc.nextInt();
+//                    }
+//                    System.out.println("Marks are: ");
+//                    for (int i=0; i<marks.length; i++){
+//                        sum+=marks[i];
+//
+//                        System.out.print(marks[i]+" ");
+//                    }
+//                    System.out.println();
+//
+//                    System.out.println("The Sum of marks: ");
+//
+//                    System.out.println(sum);
 
-                    int[] marks = new int[5];
-                    int sum = 0;
-
-
-                    for (int i=0; i<marks.length; i++){
-                       marks[i]= sc.nextInt();
-                    }
-                    System.out.println("Marks are: ");
-                    for (int i=0; i<marks.length; i++){
-                        sum+=marks[i];
-
-                        System.out.print(marks[i]+" ");
-                    }
-                    System.out.println();
-
-                    System.out.println("The Sum of marks: ");
-
-                    System.out.println(sum);
 
 
 
-                }
+
+
+    static int reverse(int n, int digits) {
+
+        if (n < 10) {
+            return n;
+        }
+
+        int lastDigit = n % 10;
+
+        return (int) (lastDigit * Math.pow(10, digits - 1))
+                + reverse(n / 10, digits - 1);
+    }
+
+    public static void main(String[] args) {
+
+        int num = 1234;
+
+        int digits = String.valueOf(num).length();
+
+        System.out.println(reverse(num, digits));
+    }
+
+
+
+
+
+
 
 
 
