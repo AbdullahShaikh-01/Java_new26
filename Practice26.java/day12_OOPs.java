@@ -389,53 +389,140 @@
 //    }
 //}
 
-class Rectangle{
-    private double length;
-    private double breadth;
+//class Rectangle{
+//    private double length;
+//    private double breadth;
+//
+//    Rectangle(){
+//        this.length=4;
+//        this.breadth=5;
+//    }
+//
+//    Rectangle(double length, double breadth){
+//        this.length=length;
+//        this.breadth=breadth;
+//    }
+//
+//
+//
+//    double getArea(){
+//        return length*breadth;
+//
+//    }
+//    double getPerimeter(){
+//        return 2*(length+breadth);
+//
+//
+//    }
+//
+//
+//    public static void main(String[] args){
+//        Rectangle g1 = new Rectangle();
+//        Rectangle g2 = new Rectangle(12, 9);
+//
+//        System.out.println("Rectangle 1");
+//
+//        System.out.printf("Area: %.2f%n",g1.getArea());
+//        System.out.printf("Perimeter: %.2f%n",g1.getPerimeter());
+//
+//        System.out.println();
+//
+//        System.out.println("Rectangle 2");
+//
+//        System.out.printf("Area: %.2f%n",g2.getArea());
+//        System.out.printf("Perimeter: %.2f%n",g2.getPerimeter());
+//    }
+//
+//
+//}
 
-    Rectangle(){
-        this.length=4;
-        this.breadth=5;
+
+//class Base {
+//    int x;
+//
+//    public int getX() {
+//        System.out.println("This Function is from getX!");
+//        return x;
+//    }
+//
+//    public void setX(int x) {
+//        this.x = x;
+//    }
+//
+//
+//    static class  Derived extends Base{
+//        int y;
+//
+//        public int getY() {
+//            return y;
+//        }
+//
+//        public void setY(int y) {
+//            this.y = y;
+//        }
+//    }
+//
+//    public static void main(String[] args){
+//        Base b = new Base();
+//        Derived d = new Derived();
+//        b.setX(4);
+//        System.out.println(b.getX());
+//
+//        d.setX(6);
+//        System.out.println(d.getX());
+//    }
+//
+//
+//}
+//
+
+//    class Animal{
+//        void eat(){
+//            System.out.println("Animal is eating!");
+//        }
+//
+//    }
+//    class Dog extends Animal{
+//        void bark(){
+//            System.out.println("Dog are Bark!");
+//        }
+//    }
+//public class day12_OOPs{
+//
+//  public static void main(String[] args){
+//    Dog d = new Dog();
+//    d.eat();
+//    d.bark();
+//  }
+//}
+
+class Vehicle{
+    String brand;
+    int speed;
+
+    void display(){
+        System.out.println("Brand: "+brand);
+        System.out.println("Speed: "+ speed + "KMH");
     }
+}
+class Car extends Vehicle{
+    String fuelType;
 
-    Rectangle(double length, double breadth){
-        this.length=length;
-        this.breadth=breadth;
+    void showFuelType(){
+        System.out.println("Fuel Type: "+fuelType);
     }
-
-
-
-    double getArea(){
-        return length*breadth;
-
-    }
-    double getPerimeter(){
-        return 2*(length+breadth);
-
-
-    }
-
-
-    public static void main(String[] args){
-        Rectangle g1 = new Rectangle();
-        Rectangle g2 = new Rectangle(12, 9);
-
-        System.out.println("Rectangle 1");
-
-        System.out.printf("Area: %.2f%n",g1.getArea());
-        System.out.printf("Perimeter: %.2f%n",g1.getPerimeter());
-
-        System.out.println();
-
-        System.out.println("Rectangle 2");
-
-        System.out.printf("Area: %.2f%n",g2.getArea());
-        System.out.printf("Perimeter: %.2f%n",g2.getPerimeter());
-    }
-
-
 }
 
+public class day12_OOPs{
+    public static void main(String[] args){
+        Car c = new Car();
+        c.brand="Mahindra";
+        c.speed= 100;
+        c.fuelType="Diesel";
+        c.display();
+        c.showFuelType();
+    }
+}
 
 
 
