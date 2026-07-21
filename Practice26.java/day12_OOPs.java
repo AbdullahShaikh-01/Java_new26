@@ -496,33 +496,249 @@
 //  }
 //}
 
-class Vehicle{
-    String brand;
-    int speed;
+//class Vehicle{
+//    String brand;
+//    int speed;
+//
+//    void display(){
+//        System.out.println("Brand: "+brand);
+//        System.out.println("Speed: "+ speed + "KMH");
+//    }
+//}
+//class Car extends Vehicle{
+//    String fuelType;
+//
+//    void showFuelType(){
+//        System.out.println("Fuel Type: "+fuelType);
+//    }
+//}
+//
+//public class day12_OOPs{
+//    public static void main(String[] args){
+//        Car c = new Car();
+//        c.brand="Mahindra";
+//        c.speed= 100;
+//        c.fuelType="Diesel";
+//        c.display();
+//        c.showFuelType();
+//    }
+//}
 
-    void display(){
-        System.out.println("Brand: "+brand);
-        System.out.println("Speed: "+ speed + "KMH");
+//class Person{
+//    void walk(){
+//        System.out.println("Person is walking!");
+//    }
+//}
+//class Employee extends Person{
+//    void work(){
+//        System.out.println("Employee is working!");
+//    }
+//}
+//
+//class Manager extends Employee{
+//    void manage(){
+//        System.out.println("Manager is managing!");
+//    }
+//}
+//
+//public class day12_OOPs{
+//    public static void main(String[] args){
+//        Manager m = new Manager();
+//        m.walk();
+//        m.work();
+//        m.manage();
+//    }
+//}
+
+//class Base1{
+//    Base1(){
+//        System.out.println("I am a Base1 Constructor!");
+//    }
+//}
+//class Derived extends Base1{
+//    Derived(){
+//        System.out.println("I am a Derived Constructor!");
+//    }
+//    Derived(int x){
+//        System.out.println("I am a Derived class constructor: "+x);
+//    }
+//}
+//class ChildOfDerived extends Derived{
+//    ChildOfDerived(){
+//        System.out.println("I am a ChildOfDerived Constructor!");
+//    }
+//    ChildOfDerived(int x, int y){
+//        super(x);
+//        System.out.println("I am a ChildOfDerived class constructor: "+y);
+//    }
+//}
+//
+//class ChildWoodDerived extends ChildOfDerived{
+//    ChildWoodDerived(){
+//        System.out.println("I am a ChildWoodDerived Constructor!");
+//    }
+//    ChildWoodDerived(int x, int y, int z){
+//        super(x,y);
+//        System.out.println("I am a ChildWoodDerived class constructor: "+z);
+//    }
+//}
+//
+//public class day12_OOPs{
+//    public static void main(String[] args){
+//        Base1 b1 = new Base1();
+//       ChildOfDerived c = new ChildOfDerived(12, 45);
+//        ChildWoodDerived ch = new ChildWoodDerived(12,54,78);
+//    }
+//}
+
+
+//class LivingBeing {
+//    LivingBeing(){
+//        System.out.println("LivingBeing Constructor!");
+//    }
+//}
+//class Animal extends LivingBeing{
+//
+//    Animal(String type){
+//        System.out.println("Animal Type: "+type);
+//
+//    }
+//
+//}
+//
+//class Dog extends Animal{
+//    Dog(String type, String breed){
+//        super(type);
+//        System.out.println("Breed: "+breed);
+//    }
+//}
+//
+//public class day12_OOPs {
+//    public static void main(String[] args){
+//        Dog b1 = new Dog("Dog", "Labrador");
+//
+//    }
+//}
+//
+
+//
+//class Bird{
+//    void fly(){
+//        System.out.println("Bird is flying!");
+//    }
+//}
+//class Eagle extends Bird{
+//    @Override
+//    void fly(){
+//        System.out.println("Eagle flies very high as compare Bird!");
+//    }
+//}
+//
+//public class day12_OOPs {
+//   public static void main(String[] args) {
+//       Eagle e = new Eagle();
+//
+//       e.fly();
+//
+//    }
+//}
+
+class Person{
+    private String name;
+    private int age;
+
+    public Person(String name, int age){
+        this.name=name;
+        this.age=age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void displayPerson(){
+        System.out.println("Name: "+getName());
+        System.out.println("Age: "+getAge());
+    }
+
+}
+class Employee extends Person{
+    private int employeeId;
+    private double salary;
+
+   public Employee(String name, int age, int employeeId, double salary){
+        super(name, age);
+        this.employeeId= employeeId;
+        this.salary=salary;
+    }
+    public void setEmployeeId(int employeeId){
+       this.employeeId=employeeId;
+    }
+    public int getEmployeeId(){
+       return employeeId;
+    }
+
+    public void setSalary(double salary){
+       this.salary=salary;
+    }
+    public double getSalary(){
+       return salary;
+    }
+
+    public void displayEmployee(){
+        System.out.println("Employee ID: "+getEmployeeId());
+        System.out.printf("Salary: %.2f%n",getSalary());
     }
 }
-class Car extends Vehicle{
-    String fuelType;
+class Manager extends Employee {
+    private String department;
 
-    void showFuelType(){
-        System.out.println("Fuel Type: "+fuelType);
+    public Manager(String name, int age, int employeeId, double salary, String department) {
+        super(name, age, employeeId, salary);
+        this.department = department;
+    }
+
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    @Override
+    public void displayEmployee() {
+        super.displayEmployee();
+        System.out.println("Department: " + getDepartment());
+    }
+}
+public class day12_OOPs {
+     public static void main(String[] args) {
+         Manager m = new Manager("Abdullah Shaikh", 20, 101, 500000, "IT Sector");
+         m.displayPerson();
+         System.out.println();
+         m.displayEmployee();
+
     }
 }
 
-public class day12_OOPs{
-    public static void main(String[] args){
-        Car c = new Car();
-        c.brand="Mahindra";
-        c.speed= 100;
-        c.fuelType="Diesel";
-        c.display();
-        c.showFuelType();
-    }
-}
+
+
+
+
 
 
 
