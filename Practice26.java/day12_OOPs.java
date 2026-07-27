@@ -642,7 +642,7 @@
 //
 //    }
 //}
-
+/*
 class Person{
     private String name;
     private int age;
@@ -653,18 +653,22 @@ class Person{
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setAge(int age) {
+
         this.age = age;
     }
 
     public int getAge() {
+
         return age;
     }
 
@@ -691,9 +695,11 @@ class Employee extends Person{
     }
 
     public void setSalary(double salary){
+
        this.salary=salary;
     }
     public double getSalary(){
+
        return salary;
     }
 
@@ -734,10 +740,447 @@ public class day12_OOPs {
 
     }
 }
+*/
+
+//class Animal{
+//    void sound(){
+//        System.out.println("Animal Make a Sound");
+//    }
+//}
+//class Cat extends Animal{
+//    @Override
+//    void sound(){
+//        super.sound();
+//        System.out.println("Cat says Meow");
+//    }
+//}
+//
+//public class day12_OOPs {
+//   public static void main(String[] args) {
+//       Cat c = new Cat();
+//       c.sound();
+//
+//    }
+//}
+
+//class Phone{
+//     void music(){
+//        System.out.println("Playing music");
+//    }
+//     void name(){
+//        System.out.println("I am Abdullah Shaikh");
+//    }
+//}
+//
+//class SmartPhone extends Phone{
+//    void PlayGame(){
+//        System.out.println("Playing game");
+//    }
+//    @Override
+//     void name(){
+//        System.out.println("I am 2nd Class Abdullah Shaikh");
+//    }
+//}
+//public class day12_OOPs {
+//
+//    public static void main(String[] args) {
+//        Phone obj = new SmartPhone();
+////        obj.name();
+//        obj.music();
+//        obj.name();
+//
+//    }
+//
+//}
+
+//class Person{
+//    private String name;
+//    private int age;
+//
+//    Person(String name, int age){
+//        this.name=name;
+//        this.age=age;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setAge(int age) {
+//        this.age = age;
+//
+//    }
+//
+//    public int getAge() {
+//        return age;
+//    }
+//
+//    public void display(){
+//        System.out.println("Name: "+getName());
+//        System.out.println("Age: "+getAge());
+//    }
+//}
+//
+//
+//class Student extends Person{
+//    private int rollNo;
+//    private String course;
+//
+//    Student(String name , int age, int rollNo, String course){
+//        super(name, age);
+//
+//        this.rollNo=rollNo;
+//        this.course=course;
+//    }
+//
+//    public void setRollNo(int rollNo) {
+//        this.rollNo = rollNo;
+//    }
+//
+//    public int getRollNo() {
+//        return rollNo;
+//    }
+//
+//    public void setCourse(String course) {
+//        this.course = course;
+//    }
+//
+//    public String getCourse() {
+//        return course;
+//    }
+//    @Override
+//    public void display(){
+//        super.display();
+//        System.out.println("Roll no: "+getRollNo());
+//        System.out.println("Course: "+getCourse());
+//    }
+//}
+//
+//class GraduateStudent extends Student{
+//    private String specialization;
+//    GraduateStudent(String name, int age, int rollNo, String course, String specialization){
+//        super(name,age,rollNo,course);
+//        this.specialization=specialization;
+//
+//    }
+//
+//    public void setSpecialization(String specialization) {
+//        this.specialization = specialization;
+//    }
+//
+//    public String getSpecialization() {
+//        return specialization;
+//    }
+//
+//    @Override
+//    public void display(){
+//        super.display();
+//        System.out.println("Specialization: "+getSpecialization());
+//    }
+//}
+//
+//public class day12_OOPs {
+//    public static void main(String[] args) {
+//      Person p = new GraduateStudent("Abdullah Shaikh", 20, 102, "B Tech CSE", "Artificial Intelligence");
+//      p.display();
+//    }
+//}
+
+
+//class Library{
+//    String[] availableBooks;
+//    String[] issuedBooks;
+//    int bookCount;
+//    Library(){
+//        availableBooks = new String[100];
+//        issuedBooks = new String[100];
+//        bookCount = 0;
+//    }
+//
+//    void addBook(String book){
+//        availableBooks[bookCount]= book;
+//        bookCount++;
+//        System.out.println(book + "added successfully.");
+//
+//    }
+//
+//    void showAvailableBooks(){
+//        System.out.println("\n Available Books: ");
+//        for (int i = 0; i<bookCount; i++){
+//            if (availableBooks[i] != null){
+//                System.out.println(availableBooks[i]);
+//            }
+//
+//        }
+//    }
+//
+//
+//}
+
+//class Circle {
+//    private double radius;
+//
+//    Circle(double radius) {
+//        this.radius = radius;
+//    }
+//
+//    public void setRadius(double radius) {
+//        this.radius = radius;
+//    }
+//
+//    public double getRadius() {
+//        return radius;
+//    }
+//
+//    public double area() {
+//        return Math.PI * radius * radius;
+//    }
+//}
+//     class Cylinder extends Circle {
+//        private double height;
+//        Cylinder(double radius , double height){
+//            super(radius);
+//            this.height=height;
+//        }
+//
+//         void setHeight(double height) {
+//            this.height = height;
+//        }
+//
+//        public double getHeight() {
+//            return height;
+//        }
+//        public double volume(){
+//            return area()*height;
+//        }
+//    }
+//
+//    public  class day12_OOPs{
+//         public static void main(String[] args) {
+//             Cylinder c = new Cylinder(5, 8);
+//
+//             System.out.printf("Radius: %.2f%n", c.getRadius());
+//             System.out.printf("Height: %.2f%n", c.getHeight());
+//             System.out.printf("Area of Circle: %.2f%n", c.area());
+//             System.out.printf("Volume of Cylinder: %.2f%n", c.volume());
+//
+//        }
+//    }
+//
+//
+//class Rectangle {
+//    private double length;
+//    private double breadth;
+//
+//    Rectangle(double length, double breadth){
+//        this.length=length;
+//        this.breadth=breadth;
+//    }
+//    public void setLength(double length){
+//        this.length=length;
+//    }
+//    public double getLength(){
+//        return length;
+//    }
+//
+//    public void setBreadth(double breadth) {
+//        this.breadth = breadth;
+//    }
+//
+//     public double getBreadth() {
+//        return breadth;
+//    }
+//
+//    double area(){
+//        return length*breadth;
+//    }
+//}
+//class Cuboid extends Rectangle{
+//    private double height;
+//    Cuboid(double length, double breadth, double height){
+//        super(length, breadth);
+//        this.height=height;
+//    }
+//
+//    public void setHeight(double height) {
+//        this.height = height;
+//    }
+//
+//    public double getHeight() {
+//        return height;
+//    }
+//
+//
+//    double volume(){
+//        return area()*height;
+//    }
+//}
+//
+//public class day12_OOPs {
+//    public static void main(String[] args) {
+//        Cuboid c = new Cuboid(12, 14, 8);
+//        System.out.printf("Area of Rectangle: %.2f%n" , c.area());
+//        System.out.printf("Volume of Cuboid: %.2f%n" , c.volume());
+//    }
+//}
+
+
+abstract class Person{
+    private String name;
+    private int age;
+
+    public Person(String name, int age){
 
 
 
 
+        this.name=name;
+        this.age= age;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void displayPerson(){
+        System.out.println("Name: "+getName());
+        System.out.println("Age: "+getAge());
+    }
+
+    abstract void role();
+}
+
+class Student extends Person{
+    private int studentId;
+    private String course;
+    private double cgpa;
+
+    public Student(String name, int age, int studentId, String course, double cgpa){
+        super(name, age);
+        this.studentId=studentId;
+        this.course=course;
+        this.cgpa=cgpa;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCgpa(double cgpa) {
+        this.cgpa = cgpa;
+    }
+
+    public double getCgpa() {
+        return cgpa;
+    }
+
+    @Override
+    public void role(){
+        System.out.println("Role: Student");
+    }
+    @Override
+    public void displayPerson(){
+        super.displayPerson();
+        System.out.println("Student ID: " + getStudentId());
+        System.out.println("Course: " +getCourse());
+        System.out.printf("CGPA: %.2f%n", getCgpa());
+    }
+
+
+}
+
+class Employee extends Person{
+    private int employeeId;
+    private double salary;
+
+    public Employee(String name , int age,  int employeeId, double salary){
+        super(name, age);
+        this.employeeId=employeeId;
+        this.salary=salary;
+
+
+    }
+
+    @Override
+    public void role(){
+        System.out.println("Role: Employee");
+    }
+
+    @Override
+    public void displayPerson(){
+        super.displayPerson();
+        System.out.println("Employee Id: "+employeeId);
+        System.out.printf("Salary: %.2f%n", salary);
+    }
+}
+
+class Professor extends Employee{
+    private String department;
+
+    public Professor(String name, int age, int employeeId, double salary, String department){
+        super(name, age,employeeId,salary);
+        this.department=department;
+    }
+
+    @Override
+    public void role() {
+        System.out.println("Role: Professor");
+    }
+
+    @Override
+    public void displayPerson(){
+        super.displayPerson();
+        System.out.println("Department: " + department);
+    }
+}
+
+public class day12_OOPs {
+    public static void main(String[] args) {
+        Person p1 = new Student("Abdullah Shaikh", 20, 101, "B TECH CSE", 8.30);
+        Person p2 = new Professor("Aman Khan", 30, 202, 80000, "IT Sector");
+
+
+        System.out.println("Student Details-------------");
+        System.out.println();
+        p1.displayPerson();
+        p1.role();
+
+        System.out.println();
+
+        System.out.println("Professor Details--------------");
+        System.out.println();
+        p2.displayPerson();
+        p2.role();
+    }
+}
 
 
 

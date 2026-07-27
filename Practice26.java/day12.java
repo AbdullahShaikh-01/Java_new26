@@ -70,9 +70,9 @@ public class day12 {
         }
     }
         public static void main (String[]args){
-            int n;
             System.out.print("Enter no: ");
             Scanner sc = new Scanner(System.in);
+            int n;
             n = sc.nextInt();
             table(n);
         }
