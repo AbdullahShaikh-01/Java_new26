@@ -101,7 +101,7 @@ import java.util.Scanner;
 //}
 //
 
- public class DSA_Practice_26 {
+// public class DSA_Practice_26 {
 //    public static void main(String[] args) {
 //
 //        Scanner sc = new Scanner(System.in);
@@ -217,28 +217,142 @@ import java.util.Scanner;
     }
 }
 */
-   public static void main(String[] args) {
+//
+//int[] arr = {1,2,3,4,5,6};
+//int target = 4;
+//boolean found = false;
+//
+//for (int i=0; i<arr.length; i++){
+//    if(arr[i]==target){
+//        System.out.println(i);
+//        found = true;
+//        break;
+//    }
+//}
+//
+//if(!found){
+//    System.out.println("Not Found" + -1);
+//}
+//   }
+//
 
-int[] arr = {1,2,3,4,5,6};
-int target = 4;
-boolean found = false;
 
-for (int i=0; i<arr.length; i++){
-    if(arr[i]==target){
-        System.out.println(i);
-        found = true;
-        break;
+//     int[] arr = {10,20,30,40,50,60,70};
+//
+//     int target = 30;
+//
+//     int low = 0;
+//     int high = arr.length-1;
+//
+//
+//
+//     while (low <= high) {
+//     int mid = low + (high - low) / 2;
+//         if(arr[mid] == target){
+//             System.out.println(mid);
+//             System.out.println(arr[mid]);
+//             break;
+//
+//         } else if (arr[mid]<target) {
+//             low = mid + 1;
+//         }else {
+//             high = mid - 1;
+//         }
+//
+//         }
+//
+//     }
+//}
+
+
+// public static void main(String[] args) {
+//     int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//
+//     int target = 5;
+//
+//     int low = 0;
+//     int high = arr.length-1;
+//
+//     while (low <= high){
+//         int mid = low + (high - low) / 2;
+//         if (arr[mid]==target){
+//             System.out.println(mid);
+//             System.out.println(arr[mid]);
+//             break;
+//         } else if (arr[mid]<target) {
+//             low = mid + 1;
+//         }else {
+//             high = mid - 1;
+//         }
+//
+//         }
+//     }
+// }
+//
+class Main {
+    public static void main(String[] args) {
+//
+//        int[] arr = {7, 3, 6, 9, 4, 1};
+//
+//        for (int i = 1; i < arr.length; i++) {
+//
+//            int key = arr[i];
+//            int j = i - 1;
+//
+//            while (j >= 0 && arr[j] > key) {
+//                arr[j + 1] = arr[j];
+//                j--;
+//            }
+//
+//            arr[j + 1] = key;
+//        }
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+
+
+        int[] arr = {12, 7, 87, 45, 8, 11, 30};
+
+        int[] newArray = new int[8];
+        int index = 3;
+        int value = 90;
+
+
+        for (int i=0, j=0; i<newArray.length; i++){
+            if (i == index){
+                newArray[i] = value;
+            }else {
+                newArray[i]=arr[j];
+                j++;
+
+                }
+            }
+
+        for (int i = 0; i < newArray.length; i++) {
+            System.out.print(newArray[i] + " ");
+        }
+
     }
-}
-
-if(!found){
-    System.out.println("Not Found" + -1);
-}
-   }
-
-
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

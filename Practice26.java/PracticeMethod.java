@@ -248,7 +248,36 @@ import java.util.Scanner;
 
 
 
+class Node {
+    int data;
+    Node next;
 
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class PracticeMethod {
+    static void reclter(Node head) {
+        if (head == null) {
+            return;
+        }
+        System.out.println(head.data);
+        reclter(head.next);
+    }
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node head = a;
+
+        head.next = new Node(20);
+        head.next.next = new Node(30);
+        head.next.next.next = new Node(40);
+        head.next.next.next.next = new Node(50);
+
+        reclter(head);
+    }
+}
 
 
 
