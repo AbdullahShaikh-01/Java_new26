@@ -786,8 +786,6 @@ public class day12_OOPs {
 //    public static void main(String[] args) {
 //        Phone obj = new SmartPhone();
 
-import java.util.Scanner;
-
 ////        obj.name();
 //        obj.music();
 //        obj.name();
@@ -1481,6 +1479,120 @@ import java.util.Scanner;
 //        a1.sound();
 //    }
 //}
+
+abstract class BankAccount {
+    private int accountNumber;
+    private String holderName;
+    private double balance;
+
+
+    BankAccount(int accountNumber, String holderName, double balance) {
+        this.accountNumber = accountNumber;
+        this.holderName = holderName;
+        setBalance(balance);
+    }
+
+
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setHolderName(String holderName) {
+        this.holderName = holderName;
+    }
+
+    public String getHolderName() {
+        return holderName;
+    }
+
+    public void setBalance(double balance) {
+        if (balance >= 0) {
+            this.balance = balance;
+        } else {
+            System.out.println("Don't allow it");
+        }
+    }
+
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+
+    public void displayDetails() {
+        System.out.println("accountNumber is: " + getAccountNumber());
+        System.out.println("HolderName is: " + getHolderName());
+        System.out.println("Balance is: " + getBalance());
+
+    }
+    abstract void accountType();
+}
+
+
+class SavingsAccount extends BankAccount {
+
+        SavingsAccount(int accountNumber, String holderName, double balance) {
+            super(accountNumber, holderName, balance);
+        }
+
+        @Override
+        public void accountType() {
+            System.out.println("Account Type: Saving Account");
+        }
+    }
+
+        class CurrentAccount extends BankAccount {
+
+            CurrentAccount(int accountNumber, String holderName, double balance) {
+                super(accountNumber, holderName, balance);
+            }
+
+            @Override
+            public void accountType() {
+                System.out.println("Account Type: Current Account");
+            }
+
+            public static void main(String[] args) {
+                BankAccount b1 = new SavingsAccount(101, "Abdullah Shaikh", 60000);
+
+                BankAccount b2 = new CurrentAccount(102, "Shaikh", 70000);
+
+                System.out.println("Details of First Costumer");
+                System.out.println();
+
+                b1.displayDetails();
+                b1.accountType();
+
+                System.out.println();
+
+                System.out.println("Details of Second Costumer");
+                System.out.println();
+
+                b2.displayDetails();
+                b2.accountType();
+
+                b1.deposit(6000);
+                b1.withdraw(7000);
+            }
+        }
+
+
+
 
 
 
