@@ -785,6 +785,9 @@ public class day12_OOPs {
 //
 //    public static void main(String[] args) {
 //        Phone obj = new SmartPhone();
+
+import java.util.Scanner;
+
 ////        obj.name();
 //        obj.music();
 //        obj.name();
@@ -1028,159 +1031,465 @@ public class day12_OOPs {
 //    }
 //}
 
+//
+//abstract class Person{
+//    private String name;
+//    private int age;
+//
+//    public Person(String name, int age){
+//
+//
+//
+//
+//        this.name=name;
+//        this.age= age;
+//    }
+//
+//    public void setName(String name){
+//        this.name=name;
+//    }
+//
+//    public String getName(){
+//        return name;
+//    }
+//
+//    public void setAge(int age) {
+//        this.age = age;
+//    }
+//
+//    public int getAge() {
+//        return age;
+//    }
+//
+//    public void displayPerson(){
+//        System.out.println("Name: "+getName());
+//        System.out.println("Age: "+getAge());
+//    }
+//
+//    abstract void role();
+//}
+//
+//class Student extends Person{
+//    private int studentId;
+//    private String course;
+//    private double cgpa;
+//
+//    public Student(String name, int age, int studentId, String course, double cgpa){
+//        super(name, age);
+//        this.studentId=studentId;
+//        this.course=course;
+//        this.cgpa=cgpa;
+//    }
+//
+//    public void setStudentId(int studentId) {
+//        this.studentId = studentId;
+//    }
+//
+//    public int getStudentId() {
+//        return studentId;
+//    }
+//
+//    public void setCourse(String course) {
+//        this.course = course;
+//    }
+//
+//    public String getCourse() {
+//        return course;
+//    }
+//
+//    public void setCgpa(double cgpa) {
+//        this.cgpa = cgpa;
+//    }
+//
+//    public double getCgpa() {
+//        return cgpa;
+//    }
+//
+//    @Override
+//    public void role(){
+//        System.out.println("Role: Student");
+//    }
+//    @Override
+//    public void displayPerson(){
+//        super.displayPerson();
+//        System.out.println("Student ID: " + getStudentId());
+//        System.out.println("Course: " +getCourse());
+//        System.out.printf("CGPA: %.2f%n", getCgpa());
+//    }
+//
+//
+//}
+//
+//class Employee extends Person{
+//    private int employeeId;
+//    private double salary;
+//
+//    public Employee(String name , int age,  int employeeId, double salary){
+//        super(name, age);
+//        this.employeeId=employeeId;
+//        this.salary=salary;
+//
+//
+//    }
+//
+//    @Override
+//    public void role(){
+//        System.out.println("Role: Employee");
+//    }
+//
+//    @Override
+//    public void displayPerson(){
+//        super.displayPerson();
+//        System.out.println("Employee Id: "+employeeId);
+//        System.out.printf("Salary: %.2f%n", salary);
+//    }
+//}
+//
+//class Professor extends Employee{
+//    private String department;
+//
+//    public Professor(String name, int age, int employeeId, double salary, String department){
+//        super(name, age,employeeId,salary);
+//        this.department=department;
+//    }
+//
+//    @Override
+//    public void role() {
+//        System.out.println("Role: Professor");
+//    }
+//
+//    @Override
+//    public void displayPerson(){
+//        super.displayPerson();
+//        System.out.println("Department: " + department);
+//    }
+//}
+//
+//public class day12_OOPs {
+//    public static void main(String[] args) {
+//        Person p1 = new Student("Abdullah Shaikh", 20, 101, "B TECH CSE", 8.30);
+//        Person p2 = new Professor("Aman Khan", 30, 202, 80000, "IT Sector");
+//
+//
+//        System.out.println("Student Details-------------");
+//        System.out.println();
+//        p1.displayPerson();
+//        p1.role();
+//
+//        System.out.println();
+//
+//        System.out.println("Professor Details--------------");
+//        System.out.println();
+//        p2.displayPerson();
+//        p2.role();
+//    }
+//}
 
-abstract class Person{
-    private String name;
-    private int age;
 
-    public Person(String name, int age){
+//class Mobile{
+//    String brand;
+//    double price;
+//    int model;
+//
+//    void display(){
+//        System.out.println("The Brand: " + brand);
+//        System.out.println("Price is: " + price);
+//        System.out.println("Model is: " + model);
+//    }
+//
+//
+//public static void main(String[] args) {
+//    Mobile m1 = new Mobile();
+//    Mobile m2 = new Mobile();
+//
+//
+//    m1.brand = "Samsung";
+//    m1.price = 1000000;
+//    m1.model = 2025;
+//
+//    m2.brand = "Apple";
+//    m2.price = 600000;
+//    m2.model = 2026;
+//
+//    m1.display();
+//    System.out.println();
+//    m2.display();
+//
+//}
 
-
-
-
-        this.name=name;
-        this.age= age;
-    }
-
-    public void setName(String name){
-        this.name=name;
-    }
-
-    public String getName(){
-        return name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void displayPerson(){
-        System.out.println("Name: "+getName());
-        System.out.println("Age: "+getAge());
-    }
-
-    abstract void role();
-}
-
-class Student extends Person{
-    private int studentId;
-    private String course;
-    private double cgpa;
-
-    public Student(String name, int age, int studentId, String course, double cgpa){
-        super(name, age);
-        this.studentId=studentId;
-        this.course=course;
-        this.cgpa=cgpa;
-    }
-
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
-    }
-
-    public int getStudentId() {
-        return studentId;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
-    }
-
-    public String getCourse() {
-        return course;
-    }
-
-    public void setCgpa(double cgpa) {
-        this.cgpa = cgpa;
-    }
-
-    public double getCgpa() {
-        return cgpa;
-    }
-
-    @Override
-    public void role(){
-        System.out.println("Role: Student");
-    }
-    @Override
-    public void displayPerson(){
-        super.displayPerson();
-        System.out.println("Student ID: " + getStudentId());
-        System.out.println("Course: " +getCourse());
-        System.out.printf("CGPA: %.2f%n", getCgpa());
-    }
+//}
 
 
-}
-
-class Employee extends Person{
-    private int employeeId;
-    private double salary;
-
-    public Employee(String name , int age,  int employeeId, double salary){
-        super(name, age);
-        this.employeeId=employeeId;
-        this.salary=salary;
-
-
-    }
-
-    @Override
-    public void role(){
-        System.out.println("Role: Employee");
-    }
-
-    @Override
-    public void displayPerson(){
-        super.displayPerson();
-        System.out.println("Employee Id: "+employeeId);
-        System.out.printf("Salary: %.2f%n", salary);
-    }
-}
-
-class Professor extends Employee{
-    private String department;
-
-    public Professor(String name, int age, int employeeId, double salary, String department){
-        super(name, age,employeeId,salary);
-        this.department=department;
-    }
-
-    @Override
-    public void role() {
-        System.out.println("Role: Professor");
-    }
-
-    @Override
-    public void displayPerson(){
-        super.displayPerson();
-        System.out.println("Department: " + department);
-    }
-}
-
-public class day12_OOPs {
-    public static void main(String[] args) {
-        Person p1 = new Student("Abdullah Shaikh", 20, 101, "B TECH CSE", 8.30);
-        Person p2 = new Professor("Aman Khan", 30, 202, 80000, "IT Sector");
+//class Employee{
+//    String name;
+//    int  salary;
+//
+//    public String getName(){
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public int getSalary(){
+//        return salary;
+//
+//    }
+//
+//    public void setSalary(int salary) {
+//        this.salary = salary;
+//    }
+//
+//    public void displayDetails(){
+//        System.out.println("Name: " + getName());
+//        System.out.println("Salary: " + getSalary());
+//
+//    }
+//
+//    public static void main(String[] args) {
+//        Employee e1 = new Employee();
+//        e1.setName("Abdullah Shaikh");
+//        e1.setSalary(50000);
+//
+//        e1.displayDetails();
+//
+//    }
+//
+//}
 
 
-        System.out.println("Student Details-------------");
-        System.out.println();
-        p1.displayPerson();
-        p1.role();
+//class Square{
+//    static Scanner sc = new Scanner(System.in);
+//    int side;
+//    float area;
+//    double perimeter;
+//
+//
+//    public void setSide(int side){
+//        this.side=side;
+//    }
+//
+//    public int getSide(){
+//        return side;
+//    }
+//
+//
+//
+//    public float getArea() {
+//        return side*side;
+//    }
+//
+//
+//    public double getPerimeter() {
+//        return 4*side;
+//    }
+//
+//    public void displayData(){
+//        System.out.println("Side: " + getSide());
+//        System.out.println("area: " + getArea());
+//        System.out.println("perimeter : " + getPerimeter());
+//
+//    }
+//
+//   public static void main(String[] args) {
+//        Square s1 = new Square();
+//       System.out.println("Enter Side: ");
+//        s1.setSide(sc.nextInt());
+//
+//        s1.displayData();
+//    }
+//}
 
-        System.out.println();
 
-        System.out.println("Professor Details--------------");
-        System.out.println();
-        p2.displayPerson();
-        p2.role();
-    }
-}
+//class BankAccount{
+//    private String accountHolder;
+//    private double balance;
+//
+//    BankAccount(String accountHolder, double balance){
+//        this.accountHolder=accountHolder;
+//        this.balance=balance;
+//    }
+//
+//    public void setAccountHolder(String accountHolder){
+//        this.accountHolder=accountHolder;
+//    }
+//
+//    public String getAccountHolder(){
+//        return accountHolder;
+//    }
+//
+//    public void setBalance(double balance) {
+//        if (balance >= 0) {
+//            this.balance = balance;
+//        }
+//    }
+//
+//    public double getBalance(){
+//        return balance;
+//    }
+//
+//    public void displayData(){
+//        System.out.println("Account Holder name is: " + getAccountHolder());
+//        System.out.println("Balance is: " + getBalance());
+//
+//    }
+//
+//
+//    public static void main(String[] args) {
+//        BankAccount Ba1 = new BankAccount("Abdullah Shaikh", 40000);
+//        Ba1.displayData();
+//    }
+//}
+
+
+//
+//class Vehicle{
+//    public void start(){
+//
+//        System.out.println("Vehicle is starting");
+//    }
+//}
+//class Car extends Vehicle {
+//
+//    @Override
+//    public void start() {
+//        super.start();
+//        System.out.println("Car is starting with a key");
+//    }
+//}
+//class Puppy extends Car{
+//    @Override
+//    public void start(){
+//        super.start();
+//        System.out.println("puppy is Starting with a key");
+//
+//    }
+//
+//
+//public static void main(String[] args) {
+//    Vehicle v1 = new Puppy();
+//
+//    v1.start();
+//
+//}
+//
+//}
+
+
+
+//class Employee{
+//    private int id;
+//    private String name;
+//    private double salary;
+//
+//    Employee(int id, String name, double salary){
+//        this.id=id;
+//        this.name=name;
+//        setSalary(salary);
+//
+//    }
+//
+//    public void setId(int id){
+//        this.id=id;
+//    }
+//
+//    public int getId(){
+//        return id;
+//    }
+//
+//    public void setName(String name){
+//        this.name=name;
+//
+//    }
+//
+//    public String getName(){
+//        return name;
+//    }
+//
+//    public void setSalary(double salary){
+//        if (salary >= 0) {
+//            this.salary=salary;
+//        }
+//    }
+//
+//    public double getSalary() {
+//            return salary;
+//    }
+//
+//    public void displayDetails(){
+//        System.out.println("ID: " + getId());
+//        System.out.println("Name: " + getName());
+//        System.out.println("Salary: " + getSalary());
+//    }
+//
+//    public void displayRole(){
+//        System.out.println("Employee");
+//    }
+//
+//
+//}
+//
+//class Manager extends Employee{
+//    private  String department;
+//
+//    Manager(int id, String name, double salary, String department){
+//        super(id,name,salary);
+//        this.department=department;
+//    }
+//
+//    @Override
+//    public void displayRole(){
+//        System.out.println("Manager");
+//    }
+//
+//    public static void main(String[] args) {
+//        Employee e1 = new Manager(105, "Abdullah Shaikh", -70000, "Software Engineer");
+//
+//        e1.displayDetails();
+//        e1.displayRole();
+//    }
+//}
+
+// Rivi son of Abstraction
+
+//abstract class Animal{
+//    Animal(){
+//        System.out.println("Animal Constructor");
+//    }
+//
+//    abstract void sound();
+//
+//
+//}
+//
+//class Dog extends Animal{
+//    Dog(){
+//        super();
+//        System.out.println("Dog Constructor");
+//    }
+//
+//    @Override
+//    public void sound(){
+//        System.out.println("Dog is bark");
+//
+//    }
+//
+//    public static void main(String[] args) {
+//        Animal a1 = new Dog();
+//
+//        a1.sound();
+//    }
+//}
+
+
+
+
+
+
+
+
+
 
 
 

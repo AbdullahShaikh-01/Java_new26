@@ -40,7 +40,7 @@ import java.util.Scanner;
 //        int right = arr.length - 1;
 //
 //        while (left<right){
-//            int temp = arr[left];
+//            int temp = arr[];
 //            arr[left]=arr[right];
 //            arr[right]=temp;
 //
@@ -102,15 +102,15 @@ import java.util.Scanner;
 //
 
  public class DSA_Practice_26 {
-    public static void main(String[] args) {
-
+//    public static void main(String[] args) {
+//
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Enter arrays---: ");
 //        int n = sc.nextInt();
 //        System.out.println("Enter " + n + " elements:");
 //        int[] arr = new int[n];
 //
-//        for (int i = 0; i < arr.length; i++) {
+//        for (int i = 0; i < arr.length; i++){
 //            arr[i] = sc.nextInt();
 //        }
 //
@@ -149,20 +149,97 @@ import java.util.Scanner;
 //}
 
 
-        class Solution {
-            public int removeElement(int[] nums, int val) {
-                int k = 0;
-                for (int i = 0; i < nums.length; i++) {
-                    if (nums[i] != val) {
-                        nums[k] = nums[i];
-                        k++;
-                    }
+//        class Solution {
+//            public int removeElement(int[] nums, int val) {
+//                int k = 0;
+//                for (int i = 0; i < nums.length; i++) {
+//                    if (nums[i] != val) {
+//                        nums[k] = nums[i];
+//                        k++;
+//                    }
+//                }
+//                return k;
+//            }
+//        }
+//    }
+//
+
+
+//    public static void main(String[] args) {
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter arrays---: ");
+//        int n = sc.nextInt();
+//        System.out.println("Enter " + n + " elements:");
+//        int[] arr = new int[n];
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = sc.nextInt();
+//        }
+//
+//
+//        for (int i = 0; i < arr.length - 1; i++){
+//            for (int j=0; j<n-i-1; j++){
+//            if (arr[j] > arr[j + 1]) {
+//                int temp = arr[j];
+//                arr[j]=arr[j+1];
+//                arr[j+1]=temp;
+//            }
+//            }
+//        }
+//
+//        System.out.println("Sorted array:");
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//
+//    }
+//
+//}
+
+
+   /* public static int linearSearch(int[] nums, int target) {
+
+            for (int i=0; i<nums.length; i++){
+                if (nums[i]==target){
+                    return i;
                 }
-                return k;
             }
-        }
+                    return -1;
     }
+
+    public static void main(String[] args) {
+        int[] arr = {12, 45, 78, 90,47,65};
+        int target = 78;
+        System.out.println(linearSearch(arr, target));
+
     }
+}
+*/
+   public static void main(String[] args) {
+
+int[] arr = {1,2,3,4,5,6};
+int target = 4;
+boolean found = false;
+
+for (int i=0; i<arr.length; i++){
+    if(arr[i]==target){
+        System.out.println(i);
+        found = true;
+        break;
+    }
+}
+
+if(!found){
+    System.out.println("Not Found" + -1);
+}
+   }
+
+
+
+}
+
 
 
 
