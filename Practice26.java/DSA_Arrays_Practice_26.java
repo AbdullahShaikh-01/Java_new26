@@ -1,7 +1,3 @@
-import java.util.Scanner;
-
-
-
 //        int[] arr = {12, 34, 56, 78, 98};
 //        int target = 100;
 //        boolean found = false;
@@ -289,53 +285,295 @@ import java.util.Scanner;
 //     }
 // }
 //
-class Main {
-    public static void main(String[] args) {
+//class Main {
+//    public static void main(String[] args) {
+////
+////        int[] arr = {7, 3, 6, 9, 4, 1};
+////
+////        for (int i = 1; i < arr.length; i++) {
+////
+////            int key = arr[i];
+////            int j = i - 1;
+////
+////            while (j >= 0 && arr[j] > key) {
+////                arr[j + 1] = arr[j];
+////                j--;
+////            }
+////
+////            arr[j + 1] = key;
+////        }
+////
+////        for (int i = 0; i < arr.length; i++) {
+////            System.out.print(arr[i] + " ");
+////        }
+
+
+//        int[] arr = {12, 7, 87, 45, 8, 11, 30};
 //
-//        int[] arr = {7, 3, 6, 9, 4, 1};
+//        int[] newArray = new int[8];
+//        int index = 3;
+//        int value = 90;
 //
-//        for (int i = 1; i < arr.length; i++) {
 //
-//            int key = arr[i];
-//            int j = i - 1;
+//        for (int i=0, j=0; i<newArray.length; i++){
+//            if (i == index){
+//                newArray[i] = value;
+//            }else {
+//                newArray[i]=arr[j];
+//                j++;
 //
-//            while (j >= 0 && arr[j] > key) {
-//                arr[j + 1] = arr[j];
-//                j--;
+//                }
 //            }
 //
-//            arr[j + 1] = key;
+//        for (int i = 0; i < newArray.length; i++) {
+//            System.out.print(newArray[i] + " ");
 //        }
 //
-//        for (int i = 0; i < arr.length; i++) {
-//            System.out.print(arr[i] + " ");
+//    }
+//
+//}
+
+
+    // Bubble sort
+public class DSA_Arrays_Practice_26 {
+    public static void main(String[] args) {
+        //        int[] arr = {1,4,8,9,2,7};
+        //
+        //        for (int i=0; i< arr.length-1; i++){
+        //            for (int j=0; j< arr.length -1 - i; j++){
+        //                if (arr[j]>arr[j+1]){
+        //                    int temp = arr[j];
+        //                    arr[j] = arr[j+1];
+        //                    arr[j+1] = temp;
+        //
+        //
+        //
+        //                }
+        //            }
+        //        }
+        //
+        //        int[] newArry = new int[7];
+        //
+        //        int index = 4;
+        //        int value = 77;
+        //
+        //        for (int i=0, j=0; i<newArry.length;i++){
+        //            if (i==index){
+        //                newArry[i]=value;
+        //            }else {
+        //                newArry[i]=arr[j];
+        //                j++;
+        //            }
+        //        }
+        //
+        //
+        //
+        //        for(int i=0; i<newArry.length; i++){
+        //            System.out.print(newArry[i] + " ");
+        //        }
+
+
+//            int[] arr = {2,1,4,7,0,3,9};
+//
+//            for (int i=0; i< arr.length-1; i++){
+//                for (int j=0; j< arr.length-1-i; j++){
+//                    if (arr[j]>arr[j+1]){
+//                        int temp = arr[j];
+//                        arr[j]=arr[j+1];
+//                        arr[j+1]=temp;
+//                    }
+//                }
+//            }
+//
+//            int[] newArray = new int[8];
+//            int index = 4;
+//            int value = 8;
+//
+//            for (int i=0,j=0; i<newArray.length; i++){
+//                if (i==index){
+//                    newArray[i]=value;
+//                }else {
+//                    newArray[i]=arr[j];
+//                    j++;
+//                }
+//            }
+//
+//
+//            int ind = 4;
+//
+//            for (int i=ind; i<newArray.length-1; i++){
+//                newArray[i]= newArray[i+1];
+//
+//
+//            }
+//
+//            int newSize = newArray.length - 1;
+//
+//            for (int i=0; i<newSize; i++){
+//                System.out.print(newArray[i] + " ");
+//            }
+
+
+        // Searching in Arrays.....
+
+
+        // Linear Search.....
+
+//            int[] arr = {10,20,30,40,50};
+//
+//            int target = 30;
+//            boolean found = false;
+//
+//            for (int i=0; i< arr.length; i++){
+//                if (arr[i]==target){
+//                    found = true;
+//                    System.out.println("array in index is :" + i);
+//                    break;
+//            }
+//
+//                }
+//            if (found){
+//                    System.out.println("Element present in array");
+//
+//                }else{
+//                    System.out.println("Element not present in array");
+//                }
+
+
+        //  Binary Search......
+
+//
+//            int[] arr = {10,20,30,40,50};
+//
+//            int target = 400;
+//
+//            int low = 0;
+//            int high = arr.length-1;
+//            boolean found = false;
+//
+//            while (low<=high){
+//                int mid = low + (high-low)/2;
+//                if (arr[mid]==target){
+//                    System.out.println(mid);
+//                    System.out.println(arr[mid]);
+//                    found = true;
+//                    break;
+//                } else if (arr[mid]<target) {
+//                    low = mid + 1;
+//
+//
+//                }else {
+//                    high = mid - 1;
+//                }
+//
+//            }
+//
+//            if (!found){
+//                System.out.println("Element not found!");
+//            }
+
+
+        // Insertion Sort.......
+
+
+//            int[] arr = {7, 3, 5, 2, 6};
+//
+//            for (int i =1; i< arr.length; i++){
+//                int key = arr[i];
+//                int j = i - 1;
+//
+//                while (j>=0 && arr[j]>key){
+//                    arr[j+1]= arr[j];
+//                    j--;
+//                }
+//
+//                arr[j+1]=key;
+//            }
+//
+//            for (int i=0; i< arr.length; i++){
+//                System.out.print(arr[i]+ " ");
+//            }
+
+
+        // Selection Sort........
+
+
+//        int[] arr = {3, 5, 9, 0, 4, 2, 7};
+//
+//        for (int i = 0; i < arr.length - 1; i++) {
+//            int minIndex = i;
+//
+//            for (int j = i + 1; j < arr.length; j++) {
+//                if (arr[j] < arr[minIndex]) {
+//                    minIndex = j;
+//                }
+//            }
+//
+//            int temp = arr[i];
+//            arr[i] = arr[minIndex];
+//            arr[minIndex] = temp;
+//        }
+//
+//        for (int i=0; i< arr.length; i++){
+//            System.out.print(arr[i]+ " ");
 //        }
 
 
-        int[] arr = {12, 7, 87, 45, 8, 11, 30};
-
-        int[] newArray = new int[8];
-        int index = 3;
-        int value = 90;
 
 
-        for (int i=0, j=0; i<newArray.length; i++){
-            if (i == index){
-                newArray[i] = value;
-            }else {
-                newArray[i]=arr[j];
-                j++;
+    // given the array first you have to do sorted of the array then insert 55 at index no 6
 
-                }
-            }
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//
+//        int[] arr = new int[n];
+//
+//        System.out.println("Enter "+ n + "Element here: ");
+//
+//        for (int i=0; i< arr.length; i++){
+//            arr[i] = sc.nextInt();
+//        }
+//
+//
+//        for (int i=0; i< arr.length; i++){
+//            for(int j=0; j< arr.length-i-1; j++){
+//                if (arr[j]>arr[j+1]){
+//                    int temp = arr[j];
+//                    arr[j]=arr[j+1];
+//                    arr[j+1]=temp;
+//                }
+//            }
+//        }
+//
+//
+//
+//        for (int i=0; i< arr.length; i++){
+//            System.out.print(arr[i]+ " ");
+//        }
 
-        for (int i = 0; i < newArray.length; i++) {
-            System.out.print(newArray[i] + " ");
-        }
+
+
+
+
+
 
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

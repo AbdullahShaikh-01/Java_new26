@@ -338,10 +338,10 @@
 ////
 ////    }
 //
-//
+////
 //public class Basicjava_practice {
 //    public static void main(String[] args) {
-////           int count = 1;
+//////           int count = 1;
 ////       do {
 ////
 ////           System.out.println(count);
@@ -372,43 +372,43 @@
 ////        }
 ////
 ////        System.out.println(fact);
+////
+//        int[][][] arr = {
+//                {
+//                {1, 2, 3, 4},
+//                {3, 2, 7, 9}
+//        },
 //
-////        int[][][] arr = {
-////                {
-////                {1, 2, 3, 4},
-////                {3, 2, 7, 9}
-////        },
-////
-////
-////            {
-////                {4, 9, 7, 5}
-////            }
-////        };
-////
-////        for (int i = 0; i < arr.length; i++) {
-////            for (int j = 0; j < arr[i].length; j++) {
-////                for (int k = 0; k < arr[i][j].length; k++) {
-////
-////                    System.out.print(arr[i][j][k] + " ");
-////                }
-////
-////                System.out.println();
 //
-////        Scanner sc = new Scanner(System.in);
-////        float num = sc.nextFloat();
-////        System.out.println(num);
-////            float[] arr = new float[5];
-////        float[] arr = {4.5f, 6.9f, 8.6f, 9.2f};
-////        float sum = 0;
-////
-////            for (int i=0; i<=arr.length; i++){
-////                sum+=arr[i];
-////            }
-////
-////                System.out.println(sum);
+//            {
+//                {4, 9, 7, 5}
+//            }
+//        };
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                for (int k = 0; k < arr[i][j].length; k++) {
+//
+//                    System.out.print(arr[i][j][k] + " ");
+//                }
+
+//                System.out.println();
+
+//        Scanner sc = new Scanner(System.in);
+//        float num = sc.nextFloat();
+//        System.out.println(num);
+//            float[] arr = new float[5];
+//        float[] arr = {4.5f, 6.9f, 8.6f, 9.2f};
+//        float sum = 0;
+//
+//            for (int i=0; i<=arr.length; i++){
+//                sum+=arr[i];
+//            }
+//
+//                System.out.println(sum);
 //        public class Basicjava_practice {
 //    public static void main(String[] args) {
-
+//
 
 
 
@@ -453,6 +453,9 @@
 //            }
 //            System.out.println();
 //        }
+
+//import java.util.Scanner;
+
 ////
 //        System.out.println();
 //
@@ -579,9 +582,92 @@
 //        calc.displayData();
 //
 //    }
-//
-//
 //}
+
+
+//public class Basicjava_practice {
+//
+//    public static int findFactNo(int n){
+//        if(n==0 ||  n==1){
+//            return 1;
+//        }
+//
+//        return n * findFactNo(n-1);
+//
+//
+//    }
+//public static void main(String[] args){
+//    Scanner sc = new Scanner(System.in);
+//    System.out.print("Enter number: ");
+//    int n = sc.nextInt();
+//
+//    System.out.println("The fact is given number is: " + findFactNo(n));
+
+//public class Basicjava_practice {
+//
+//    public  void multi(int n){
+//        for (int i = 1; i<10; i++){
+//            System.out.println(n + " x "+ i + " = " + n*i);
+//        }
+//
+//        }
+////
+//    public static void main(String[] args) {
+//        Basicjava_practice b1  = new Basicjava_practice();
+//        b1.multi(5);
+//    }
+//
+//    public void printStar(int n){
+//    if (n==0){
+//        return;
+//    }
+//        for (int i=5-1; i>0; i--){
+//            for (int j=0; j<i; j++){
+//                System.out.print("*"+ " ");
+//            }
+//
+//            System.out.println();
+//        }
+
+
+//    }
+//
+//    public static void main(String[] args) {
+//        Basicjava_practice b2 = new Basicjava_practice();
+//        b2.printStar(5);
+//
+//    }
+//
+//
+////    public int  fib(int n){
+////        if (n==0 || n==1){
+////            return n;
+////        }
+////
+////
+////
+//////        System.out.println(n);
+////
+////        return fib(n-1)+fib(n-2);
+////    }
+////
+////    public static void main(String[] args) {
+////        Basicjava_practice b3 = new Basicjava_practice();
+////        Scanner sc = new Scanner(System.in);
+////        System.out.println("Enter number: ");
+////        int n = sc.nextInt();
+////
+////        System.out.println(b3.fib(n));
+////
+////    }
+//   }
+
+
+
+
+
+
+
 
 
 
